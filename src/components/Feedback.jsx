@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useRef, useState } from "react";
+import customerVideo from "../assets/video.webm";
+import playIcon from "../assets/Play.png";
+import customerPortrait from "../assets/person.png";
 
 function Feedback() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = React.useRef(null);
+  const videoRef = useRef(null);
 
   const handlePlayPause = () => {
     if (isPlaying) {
@@ -37,7 +40,7 @@ function Feedback() {
           <div className="relative w-full min-w-[330px] md:h-[555px] h-[240px] sm:h-[300px] ">
             <video
               ref={videoRef}
-              src="src/assets/video.webm"
+              src={customerVideo}
               className="w-full h-full object-cover"
               controls={false}
             />
@@ -48,7 +51,7 @@ function Feedback() {
             >
               {!isPlaying && (
                 <img
-                  src="src/assets/Play.png"
+                  src={playIcon}
                   alt="Play Button"
                   className="w-16 h-16"
                 />
@@ -59,7 +62,7 @@ function Feedback() {
             <div>
               <h1 className="font-roboto text-[18px] p-[30px] md:p-[40px] leading-[28ppx]">
                 <span className="text-[59.93px] leading-[76.57px]">“</span>
-                You can't go wrong with Chicken Mandi, I had it twice. The
+                You can&apos;t go wrong with Chicken Mandi, I had it twice. The
                 chicken was cooked perfectly, juicy & soft (usually mandi
                 chicken is a bit dry). I would definitely recommend it.
               </h1>
@@ -74,7 +77,7 @@ function Feedback() {
                 </h1>
               </div>
               <div>
-                <img src="src/assets/person.png" alt="" />
+                <img src={customerPortrait} alt="Khalid Al Dawsry" />
               </div>
             </div>
           </div>

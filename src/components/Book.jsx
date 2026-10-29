@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Book() {
   const [name, setName] = useState("");
@@ -54,6 +54,8 @@ function Book() {
             <div>
               <input
                 type="text"
+                name="name"
+                aria-label="Your name"
                 placeholder=" Your name *"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -64,16 +66,21 @@ function Book() {
             <div>
               <input
                 type="email"
+                name="email"
+                aria-label="Your email"
                 placeholder=" Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-[330px] md:w-[302.5px] h-[46px] gap-2 bg-inherit border border-[#E5E7EB] rounded-none placeholder:font-roboto placeholder:text-[14px] placeholder:text-white placeholder:px-3 placeholder:leading-[22px]"
+                required
               />
             </div>
 
             <div>
               <input
                 type="date"
+                name="reservationDate"
+                aria-label="Reservation date"
                 placeholder="Reservation Date"
                 value={reservationDate}
                 onChange={(e) => setReservationDate(e.target.value)}
@@ -84,6 +91,9 @@ function Book() {
             <div>
               <input
                 type="number"
+                name="totalPeople"
+                aria-label="Total people"
+                min="1"
                 placeholder=" Total People"
                 value={totalPeople}
                 onChange={(e) => setTotalPeople(e.target.value)}
@@ -91,27 +101,25 @@ function Book() {
                 required
               />
             </div>
-          </form>
-
-          <div className="flex flex-col-reverse left-0">
-            <textarea
-              placeholder=" Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-[330px] md:w-[635px] h-[140px] gap-2 bg-inherit border border-[#E5E7EB] rounded-none placeholder:font-roboto placeholder:text-[14px] placeholder:text-white placeholder:px-3 placeholder:leading-[22px]"
-            />
-          </div>
-          <div className="py-6 md:py-8">
-            <button
-              type="submit"
-              className="w-[123px] h-[48px] bg-[#FEBF00]"
-              onClick={handleSubmit}
-            >
-              <h1 className="font-roboto font-bold text-[18px] leading-[24px] flex justify-center items-center text-black">
+            <div className="flex flex-col-reverse left-0 md:basis-full">
+              <textarea
+                name="message"
+                aria-label="Message"
+                placeholder=" Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-[330px] md:w-[635px] h-[140px] gap-2 bg-inherit border border-[#E5E7EB] rounded-none placeholder:font-roboto placeholder:text-[14px] placeholder:text-white placeholder:px-3 placeholder:leading-[22px]"
+              />
+            </div>
+            <div className="py-6 md:py-8 md:basis-full">
+              <button
+                type="submit"
+                className="w-[123px] h-[48px] bg-[#FEBF00] font-roboto font-bold text-[18px] leading-[24px] text-black"
+              >
                 BOOK NOW
-              </h1>
-            </button>
-          </div>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>

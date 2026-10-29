@@ -1,5 +1,4 @@
-import React from "react";
-import Header from "./header";
+import offerImage from "../assets/offer.png";
 
 function Home() {
   return (
@@ -41,7 +40,7 @@ function Home() {
           >
             <div className="py-12 ">
               <img
-                src="src/assets/offer.svg"
+                src={offerImage}
                 alt="Offer"
                 className="h-[310px] sm:h-auto"
               />

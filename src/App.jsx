@@ -6,8 +6,6 @@ import Foods from "./components/Foods";
 import Book from "./components/Book";
 import Feedback from "./components/Feedback";
 import Footer from "./components/Footer";
-import "flowbite";
-
 function App() {
   return (
     <>

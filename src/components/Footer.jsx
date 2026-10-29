@@ -1,4 +1,8 @@
-import React from "react";
+import callIcon from "../assets/call.png";
+import facebookIcon from "../assets/fb.png";
+import xIcon from "../assets/x.png";
+import instagramIcon from "../assets/insta.png";
+import linkedinIcon from "../assets/linkedin.png";
 
 function Footer() {
   return (
@@ -41,11 +45,11 @@ function Footer() {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 ">
-              <img src="src\assets\call.png" alt="" />
+              <img src={callIcon} alt="" />
 
               <div className="text-center">
                 <h1 className="font-bebas font-bold text-[24px] leading-[28px] tracking-[0.06em]">
-                  Let's Talk
+                  Let&apos;s Talk
                 </h1>
                 <div className="py-3">
                   <h1 className="font-roboto font-normal text-[16px] leading-[25px] text-center">
@@ -118,10 +122,10 @@ function Footer() {
           </div>
           <div className="md:flex-col">
             <div className="flex items-center justify-center gap-[16.16px] pt-[40px]">
-              <img src="src\assets\fb.png" alt="" />
-              <img src="src\assets\x.png" alt="" />
-              <img src="src\assets\insta.png" alt="" />
-              <img src="src\assets\linkedin.png" alt="" />
+              <img src={facebookIcon} alt="Facebook" />
+              <img src={xIcon} alt="X" />
+              <img src={instagramIcon} alt="Instagram" />
+              <img src={linkedinIcon} alt="LinkedIn" />
             </div>
             <div className="flex items-center justify-center py-4">
               <h1 className="font-roboto font-normal text-[16px] md:text-[21px] leading-[18.75px] md:leading-[24.61px] tracking-[0.03em]">

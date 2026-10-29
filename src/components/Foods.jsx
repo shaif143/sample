@@ -1,4 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import burgerImage from "../assets/burger.png";
+import pizzaImage from "../assets/pizza.png";
+import friesImage from "../assets/fries.png";
+import chickenImage from "../assets/chicken.png";
+import foodImage from "../assets/food.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -53,7 +58,7 @@ function Foods() {
               >
                 <div className="w-[330px] md:w-[306px] h-[300px] bg-[#FFFFFF] flex flex-col items-center mt-8 p-[32px] z-10">
                   <div className="flex flex-col items-center w-[186px] h-[124px] top-[-2px] left-[-33px]">
-                    <img src="src/assets/burger.png" alt="" />
+                    <img src={burgerImage} alt="Burger" />
                   </div>
                   <div className="w-[57PX] h-0 border-t-4 border-[#BD1F17] mt-4"></div>
                   <div className="flex flex-col items-center py-4">
@@ -67,7 +72,7 @@ function Foods() {
                 </div>
                 <div className="w-[330px] md:w-[306px] h-[300px] bg-[#FFFFFF] flex flex-col items-center mt-8 p-[32px] z-10">
                   <div className="flex flex-col items-center w-[186px] h-[124px] top-[-2px] left-[-33px]">
-                    <img src="src/assets/pizza.png" alt="" />
+                    <img src={pizzaImage} alt="Pizza" />
                   </div>
                   <div className="w-[57PX] h-0 border-t-4 border-[#BD1F17] mt-4"></div>
                   <div className="flex flex-col items-center py-4">
@@ -81,7 +86,7 @@ function Foods() {
                 </div>
                 <div className="w-[330px] md:w-[306px] h-[300px] bg-[#FFFFFF] flex flex-col items-center mt-8 p-[32px] z-10">
                   <div className="flex flex-col items-center w-[186px] h-[124px] top =[-2px] left-[-33px]">
-                    <img src="src/assets/fries.png" alt="" />
+                    <img src={friesImage} alt="French fries" />
                   </div>
                   <div className="w-[57PX] h-0 border-t-4 border-[#BD1F17] mt-4"></div>
                   <div className="flex flex-col items-center py-4">
@@ -95,7 +100,7 @@ function Foods() {
                 </div>
                 <div className="w-[330px] md:w-[306px] h-[300px] bg-[#FFFFFF] flex flex-col items-center mt-8 p-[32px] z-10">
                   <div className="flex flex-col items-center w-[186px] h-[124px] top-[-2px] left-[-33px]">
-                    <img src="src/assets/chicken.png" alt="" />
+                    <img src={chickenImage} alt="Chicken dish" />
                   </div>
                   <div className="w-[57PX] h-0 border-t-4 border-[#BD1F17] mt-4"></div>
                   <div className="flex flex-col items-center py-4">
@@ -146,7 +151,7 @@ function Foods() {
             </div>
           </div>
           <div className="hidden lg:block lg:relative top-[-440px]">
-            <img src="src\assets\food.png" alt="" />
+            <img src={foodImage} alt="Featured dish" />
           </div>
         </div>
       </div>
